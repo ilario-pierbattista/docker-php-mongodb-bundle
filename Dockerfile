@@ -19,6 +19,7 @@ RUN apt-get update \
         libzip-dev \
         locales \
         openssl \
+        libonig-dev \
     && apt-get clean
 
 RUN docker-php-ext-install -j5 \
