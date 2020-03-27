@@ -14,7 +14,7 @@ env:
     - TARGET="php-7.4-mongoext-1.6.0"
 
 before_script:
-  - echo "$DOCKERHUB_PASSWORD" | docker login -u "$DOCKERHUB_USERNAME" --password-stdin
+  - echo "$DOCKERHUB_PASSWORD" | docker login -u "$DOCKERHUB_USER" --password-stdin
 
 script:
   - make ${TARGET}
