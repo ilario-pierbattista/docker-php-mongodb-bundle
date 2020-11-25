@@ -34,8 +34,7 @@ RUN docker-php-ext-install -j5 \
         mbstring \
         zip
 
-RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer \
-    && composer global require hirak/prestissimo
+RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
 # No version of xdebug for php-7.3
 RUN if echo "$PHP_VERSION" | grep -Eq '7\.3\.\d*'; \
